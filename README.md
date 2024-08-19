@@ -1,17 +1,11 @@
-- 👋 Hi, I’m @ha231-big
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+from flask import Flask
 
-<!---
-ha231-big/ha231-big is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
-<html>
-  <ui>phim moi</ui>
-  <h>ngan cach</h>
-  <ui>phim cu</ui>
-</html>
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "<h1>Welcome to My Simple Website!</h1>"
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
